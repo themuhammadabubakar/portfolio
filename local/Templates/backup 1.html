@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Muhammad Abubakar — Portfolio</title>
+    <meta name="description" content="Muhammad Abubakar — Geologist • Software Developer • Innovator. Portfolio showcasing projects, experience and contact info." />
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --muted:#6b7280; --accent:#0ea5a4;
+      --glass: rgba(255,255,255,0.7);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{
+        box-sizing:border-box
+    }
+    body{
+        margin:0;
+        background:linear-gradient(180deg,#f3f7fa,var(--bg)); 
+        color:#0f172a; 
+        -webkit-font-smoothing:antialiased
+    }
+    .container{
+        max-width:1100px;
+        margin:32px auto;
+        padding:24px;
+    }
+    header{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:16px;
+        margin-bottom:20px
+    }
+    .brand{
+        display:flex;
+        gap:14px;
+        align-items:center
+    }
+    .avatar{
+        width:68px;
+        height:68px;
+        border-radius:14px;
+        background:linear-gradient(135deg,var(--accent),#0369a1);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        font-weight:700;
+        font-size:20px
+    }
+    h1{
+        margin:0;
+        font-size:20px
+    }
+    .subtitle{
+        font-size:13px;
+        color:var(--muted)
+    }
+    nav a{
+        margin-left:14px;
+        text-decoration:none;
+        color:var(--muted);
+        font-weight:600
+    }
+    nav a:hover{
+        color:var(--accent)
+    }
+
+    .grid{
+        display:grid;
+        grid-template-columns:320px 1fr;
+        gap:20px
+    }
+
+    @media (max-width:900px){ 
+        .grid{
+            grid-template-columns:1fr
+        }
+        header{
+            flex-direction:column;
+            align-items:flex-start
+        }
+        nav{
+            margin-top:6px
+        }
+    }
+
+    /* left card */
+    .card{
+        background:var(--card);
+        border-radius:14px;
+        padding:18px;
+        box-shadow:0 6px 20px rgba(2,6,23,0.06)
+    }
+    .center{
+        text-align:center
+    }
+    .meta{
+        font-size:13px;
+        color:var(--muted);
+        margin-top:8px
+    }
+    .btn{
+        display:inline-block;
+        padding:9px 14px;
+        border-radius:10px;
+        background:linear-gradient(90deg,var(--accent),#0284c7);
+        color:white;
+        text-decoration:none;
+        font-weight:600
+    }
+    .chips{
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+        margin-top:10px
+    }
+    .chip{
+        background:#f1f5f9;
+        padding:6px 10px;
+        border-radius:999px;
+        font-size:13px;
+        color:#334155
+    }
+
+    /* main content */
+    .section{
+        margin-bottom:20px
+    }
+    .section h2{
+        margin:0 0 12px 0;
+        font-size:16px
+    }
+    .project-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+        gap:12px
+    }
+    .project{
+        border-radius:10px;
+        padding:12px;
+        background: linear-gradient(180deg, rgba(2,6,23,0.02), rgba(2,6,23,0.01));border:1px solid rgba(15,23,42,0.03)
+    }
+    .project .tag{
+        font-size:12px;
+        color:var(--muted)
+    }
+    .project p{
+        margin:10px 0 0 0;
+        font-size:14px;
+        color:#0f172a
+    }
+
+    .exp-item{
+        margin-bottom:10px
+    }
+    .exp-item .role{
+        font-weight:700
+    }
+    .exp-item .date{
+        font-size:13px;
+        color:var(--muted)
+    }
+
+    .edu-list,.lead-list{
+        list-style:disc inside;
+        color:#0f172a
+    }
+    footer{
+        margin-top:26px;
+        text-align:center;
+        color:var(--muted);
+        font-size:13px
+    }
+
+    /* contact form */
+    form .row{
+        display:flex;
+        gap:12px
+    }
+    form input, form textarea{
+        width:100%;
+        padding:10px;
+        border-radius:8px;
+        border:1px solid #e6eef6;
+        background:transparent;
+        font-size:14px
+    }
+    form textarea{
+        min-height:110px;
+        resize:vertical
+    }
+    .muted{
+        color:var(--muted);
+        font-size:13px
+    }
+    .success{
+        background:#ecfdf5;
+        border:1px solid #bbf7d0;
+        color:#065f46;
+        padding:10px;
+        border-radius:8px;
+        margin-bottom:12px
+    }
+
+    /* small touches */
+    .small{
+        font-size:13px;
+        color:var(--muted)
+    }
+    .divider{
+        height:1px;
+        background:linear-gradient(90deg,transparent,#e6eef6,transparent);
+        margin:16px 0;
+        border-radius:2px
+    }
+    </style>
+  
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">MA</div>
+        <div>
+          <h1>Muhammad Abubakar</h1>
+          <div class="subtitle">Geologist • Software Developer • NG</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="grid" role="main">
+      <!-- left column -->
+      <aside class="card" aria-labelledby="about-heading">
+        <div class="center">
+          <h2 id="about-heading">About</h2>
+          <p class="meta">B.Sc. Geology (expected Apr 2026) • Founder, Schoovir Nigeria • Game & Software developer</p>
+        </div>
+
+        <p class="small" style="margin-top:12px">
+          I build educational technology, geoscience tools and immersive VR experiences. I founded Schoovir — delivering digital learning solutions to 100+ schools — and I develop tools bridging local-language support, offline-first mobile apps and geophysics tooling.
+        </p>
+
+        <div class="divider" role="separator"></div>
+
+        <div>
+          <h3 class="small">Contact:</h3>
+          <p class="small"><strong>Email:</strong> <a href="mailto:muhammadabubakar1649@gmail.com">muhammadabubakar1649@gmail.com</a></p>
+          <p class="small"><strong>Phone:</strong> <a href="tel: +2349132225886">+234 913 222 5886</a></p>
+          <p style="margin-top:8px"><a class="btn" href="#contact">Get in touch</a></p>
+        </div>
+
+        <div style="margin-top:14px">
+          <h3 class="small">Skills</h3>
+          <div class="chips" aria-hidden="true">
+            <span class="chip">JavaScript (React, Node)</span>
+            <span class="chip">Python (Flask, pyGIMLi)</span>
+            <span class="chip">VR / Unity</span>
+            <span class="chip">Geophysical data</span>
+            <span class="chip">RPA (OpenBots)</span>
+            <span class="chip">3D & animation</span>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <h3 class="small">Certifications</h3>
+          <ul class="small" style="padding-left:18px;margin:6px 0 0 0">
+            <li>RPA Expert — OpenBots Studio</li>
+            <li>ICT & Desktop Publishing Certificate</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- right column -->
+      <section>
+        <section id="projects" class="card section" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Selected Projects</h2>
+          <div class="project-grid" role="list">
+            <article class="project" role="listitem">
+              <div class="tag">Geophysics / Web</div>
+              <h3 style="margin:6px 0 0 0;">1D VES Resistivity Inversion App</h3>
+              <p>Full-stack app: JS frontend, Flask backend, pyGIMLi inversion. Extracts VES data from tables & map, returns model and fit with selection scores.</p>
+            </article>
+
+            <article class="project" role="listitem">
+              <div class="tag">EdTech / Product</div>
+              <h3 style="margin:6px 0 0 0;">Schoovir — Digital Learning Platform</h3>
+              <p>Platform delivering digital learning resources to 100+ schools; led product, engineering, and stakeholder engagement.</p>
+            </article>
+
+            <article class="project" role="listitem">
+              <div class="tag">Mobile / Offline-first</div>
+              <h3 style="margin:6px 0 0 0;">Mubia Mobile Wallet</h3>
+              <p>Offline-capable transaction wallet for SMEs, designed for intermittent connectivity and low-data environments.</p>
+            </article>
+
+            <article class="project" role="listitem">
+              <div class="tag">VR / Immersive</div>
+              <h3 style="margin:6px 0 0 0;">VR Tourism App</h3>
+              <p>Immersive experiences showcasing Nigerian tourism sites — built for education and cultural outreach.</p>
+            </article>
+          </div>
+          <p class="small" style="margin-top:10px">Want a case study or demo? Use the contact form below and indicate the project.</p>
+        </section>
+
+        <section id="experience" class="card section" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+
+          <div class="exp-item">
+            <div class="role">Founder & Technical Lead — Schoovir</div>
+            <div class="date">Apr 2021 – Present</div>
+            <ul class="small" style="margin:6px 0 0 0;padding-left:18px">
+              <li>Founded Schoovir; delivered digital learning solutions to 100+ schools and universities.</li>
+              <li>Led design and development of education platforms and stakeholder coordination.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="role">Software Engineer — Shamrock Innovations</div>
+            <div class="date">Nov 2021 – Present</div>
+            <ul class="small" style="margin:6px 0 0 0;padding-left:18px">
+              <li>Designed/developed mobile & web apps (Mubia Mobile Wallet, language tools).</li>
+              <li>Built Zarma language support (fonts, keyboard layout, input system).</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="role">VR Developer & Game Developer</div>
+            <div class="date">Oct 2019 – Present</div>
+            <ul class="small" style="margin:6px 0 0 0;padding-left:18px">
+              <li>Developed VR tourism app, Hunter VR game, and Hausa NLP learning tools for kids.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="education" class="card section" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <div class="small">
+            <div style="display:flex;justify-content:space-between"><strong>Bayero University Kano (BUK)</strong><span>Mar 2022 – Apr 2026 (Expected)</span></div>
+            <div class="muted">B.Sc. Geology</div>
+
+            <div style="height:12px"></div>
+            <div style="display:flex;justify-content:space-between"><strong>Gateway Computer Training Institute</strong><span>Sep 2015 – Jul 2017</span></div>
+            <div class="muted">ICT & Desktop Publishing</div>
+          </div>
+        </section>
+
+        <section id="leadership" class="card section" aria-labelledby="leadership-heading">
+          <h2 id="leadership-heading">Leadership & Volunteer</h2>
+          <ul class="lead-list">
+            <li>Social Director — Nigerian Mining & Geoscience Association (NMGS), BUK Chapter</li>
+            <li>School Head Boy — Dinop International School</li>
+            <li>Operations Coordinator — Women in Tech (SheCreate NG)</li>
+            <li>Technical Supervisor — North-West Health Innovation Hackathon</li>
+          </ul>
+        </section>
+
+        <section id="contact" class="card section" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact</h2>
+
+          <!-- Optional success message injection: server redirect could show ?sent=1 -->
+          <!-- The contact form posts to contact.php (create that file to enable email sending) -->
+          <form method="post" action="contact.php" novalidate>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <div style="flex:1;min-width:200px">
+                <label class="small" for="name">Your name</label>
+                <input id="name" name="name" required placeholder="Muhammad Abubakar" />
+              </div>
+              <div style="flex:1;min-width:200px">
+                <label class="small" for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <div style="margin-top:10px">
+              <label class="small" for="subject">Subject</label>
+              <input id="subject" name="subject" placeholder="Project inquiry / Collaboration" />
+            </div>
+
+            <div style="margin-top:10px">
+              <label class="small" for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Tell me about the opportunity or demo request"></textarea>
+            </div>
+
+            <div style="margin-top:10px;display:flex;align-items:center;gap:12px">
+              <button type="submit" class="btn">Send message</button>
+              <div class="muted">Or email me directly at <a href="mailto:muhammadabubakar1649@gmail.com">muhammadabubakar1649@gmail.com</a></div>
+            </div>
+          </form>
+        </section>
+
+        <footer>
+          <div class="small">Made by Muhammad • Replace content as needed • Resume available on request</div>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <!-- Minimal JS for progressive enhancement (optional) -->
+  <script>
+    // small accessibility: focus first invalid field on submit
+    (function(){
+      const form = document.querySelector('form');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        const invalid = form.querySelector(':invalid');
+        if(invalid){
+          invalid.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

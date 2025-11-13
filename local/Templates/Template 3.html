@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Abubakar — Portfolio</title>
+  <meta name="description" content="Elegant minimal portfolio of Muhammad Abubakar — Geologist, Software Developer, and Innovator.">
+
+  <style>
+    :root {
+      --bg: #fafafa;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --line: #e5e7eb;
+      --radius: 10px;
+      --font: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: var(--font);
+      background: var(--bg); color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 90px 20px 60px;
+      border-bottom: 1px solid var(--line);
+      background: var(--card);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+    header p {
+      color: var(--muted);
+      margin: 8px 0 0;
+      font-size: 14px;
+    }
+
+    /* Nav (simple anchor links) */
+    nav {
+      text-align: center;
+      padding: 14px 0;
+      background: var(--card);
+      border-bottom: 1px solid var(--line);
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 14px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* Layout */
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
+    section { margin-bottom: 80px; }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+    p, li { font-size: 15px; color: var(--text); }
+    ul { margin: 8px 0 0 20px; padding: 0; }
+
+    /* Cards & Grids */
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    }
+    .tag {
+      color: var(--accent);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      font-weight: 600;
+    }
+    .card h3 {
+      font-size: 15px;
+      margin: 8px 0 4px;
+      font-weight: 600;
+    }
+    .card p { font-size: 14px; color: var(--muted); }
+
+    /* Experience and Education */
+    .item {
+      margin-bottom: 18px;
+    }
+    .role {
+      font-weight: 600; font-size: 15px;
+    }
+    .date {
+      font-size: 13px; color: var(--muted);
+    }
+
+    /* Contact form */
+    form {
+      display: grid; gap: 12px; max-width: 500px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      font-size: 14px;
+      background: var(--card);
+    }
+    textarea { min-height: 100px; resize: vertical; }
+    button {
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background .2s;
+      width: max-content;
+    }
+    button:hover { background: #1d4ed8; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 30px 10px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media(max-width:600px){
+      header h1 { font-size: 22px; }
+      nav a { font-size: 13px; margin: 0 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Muhammad Abubakar</h1>
+    <p>Geologist • Software Developer • Innovator — Kano, Nigeria</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a geology student at Bayero University Kano (B.Sc. expected April 2026) and a full-stack developer who builds educational, geoscience, and VR applications.
+        As the founder of <strong>Schoovir</strong>, I develop technology that bridges science, education, and innovation — creating meaningful solutions for learning and exploration.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Geophysics / Web</div>
+          <h3>1D VES Resistivity Inversion App</h3>
+          <p>Full-stack VES inversion app using JavaScript frontend, Flask backend, and pyGIMLi — performs resistivity modeling and visualization.</p>
+        </div>
+        <div class="card">
+          <div class="tag">EdTech</div>
+          <h3>Schoovir Learning Platform</h3>
+          <p>Digital learning platform serving 100+ schools. Led design, architecture, and stakeholder collaboration.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Mobile</div>
+          <h3>Mubia Mobile Wallet</h3>
+          <p>Offline-capable wallet for SMEs enabling secure transactions with limited connectivity.</p>
+        </div>
+        <div class="card">
+          <div class="tag">VR / Cultural</div>
+          <h3>VR Tourism App</h3>
+          <p>Immersive virtual tourism app showcasing Nigerian heritage sites using Unity and WebVR.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="role">Founder & Technical Lead — Schoovir</div>
+        <div class="date">Apr 2021 – Present</div>
+        <p>Founded an EdTech startup delivering digital learning to over 100 institutions. Led technology, product, and government collaboration.</p>
+      </div>
+      <div class="item">
+        <div class="role">Software Engineer — Shamrock Innovations</div>
+        <div class="date">Nov 2021 – Present</div>
+        <p>Built mobile and web software, including Zarma language support (fonts, keyboard layout, typeface) and RPA systems.</p>
+      </div>
+      <div class="item">
+        <div class="role">VR & Game Developer</div>
+        <div class="date">Oct 2019 – Present</div>
+        <p>Developed VR tourism apps, educational games, and Hausa NLP apps to enhance interactive learning.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="item">
+        <div class="role">Bayero University Kano (BUK)</div>
+        <div class="date">Mar 2022 – Apr 2026 (Expected)</div>
+        <p>B.Sc. Geology</p>
+      </div>
+      <div class="item">
+        <div class="role">Gateway Computer Training Institute</div>
+        <div class="date">Sep 2015 – Jul 2017</div>
+        <p>ICT & Desktop Publishing</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form method="post" action="contact.php">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Muhammad Abubakar — All Rights Reserved
+  </footer>
+</body>
+</html>
