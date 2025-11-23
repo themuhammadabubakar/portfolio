@@ -32,6 +32,10 @@
 
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<!-- boxicons -->
   	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
@@ -42,7 +46,7 @@
         	<div class="brand d-flex align-items-center gap-4">
           		<div class="avatar d-flex align-items-center justify-content-center h3 fw-bold" aria-hidden="true">MA</div>
           		<div>
-            		<h1 class="h4 fw-bold m-0">Muhammad Abubakar</h1>
+					<h1 class="my-name">Muhammad Abubakar</h1>
             		<div class="text-small text-muted">Geologist • Software & Game Developer</div>
           		</div>
         	</div>
@@ -62,228 +66,229 @@
 
 		<div id="more-projects-container"></div>
 
-    	<main class="d-grid main-grid-template align-items-start gap-6" role="main">
+    	<main role="main">
+			<section id="projects-section" class="card p-4 mb-6" aria-labelledby="projects-heading">
+				<h2 class="h5 text-muted m-0 mx-1 mb-4">Projects</h2>
+				<div id="projects-grid" class="d-grid projects-grid-columns gap-3" role="list">
 
-			<!-- left column -->
-			<aside id="about-section" class="area-sticky hide-scrollbar top-0" aria-labelledby="about-heading" style="height: calc(100vh - 20px); overflow-y: auto;">
-				<div class="card p-5" style="max-height: fit-content;">
 
-					<div>
-						<h2 class="fw-bold text-center m-0">About</h2>
-						<p class="text-small m-0 my-2">Muhammad Abubakar is a software developer passionate about building impactful solutions. He has led and contributed to several projects across full-stack development, design, and deployment.</p>
-						<p class="text-small m-0 my-2">As the founder and technical lead of Schoovir, Muhammad drives a growing platform that redefines how students learn, overseeing both its technical development and overall direction.</p>
-						<p class="text-small m-0 my-2">Alongside his work in technology, he is pursuing a B.Sc. in Geology at Bayero University Kano, with a focus on geophysical modeling and hydrogeology.</p>
-					</div>
-
-					<div class="divider m-0 my-5" role="separator"></div>
-
-					<div>
-						<h3 class="text-small text-muted m-0 mb-2">Contact</h3>
-						<p class="text-small text-muted m-0 mb-1"><strong>Email:</strong> <a class="text-primary hover-underline" style="padding-bottom: 1.8px;" href="mailto:muhammadabubakar1649+portfolio@gmail.com">muhammadabubakar1649@gmail.com</a></p>
-						<p class="text-small text-muted m-0 mb-1"><strong>Phone:</strong> <a class="text-primary hover-underline" style="padding-bottom: 1.8px;" href="tel:+2349132225886">+(234) 913 222 5886</a></p>
-						<a class="btn btn-primary m-0 my-3" href="#contact-section">Get in touch</a>
-					</div>
-
-					<div>
-						<h3 class="text-small text-muted">Skills</h3>
-						<div class="chips" aria-hidden="true">
-							<span class="chip">JavaScript (React, Node)</span>
-							<span class="chip">Python (Flask, pyGIMLi)</span>
-							<span class="chip">VR / Unity</span>
-							<span class="chip">Geophysical data</span>
-							<span class="chip">RPA (OpenBots)</span>
-							<span class="chip">3D & animation</span>
+					<article class="h-100 project-card card-hover-active cursor-pointer" role="listitem" onclick="expandProjectCard(this)">
+						<div class="d-none hidden-items project-modal-image-contaner mt-2">
+							<img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Image">
 						</div>
-					</div>
 
-					<div>
-						<h3 class="text-small text-muted m-0 mt-5">Certifications</h3>
-						<ul class="text-small text-muted pl-5 m-0 mt-1 mb-3">
-							<li>RPA Expert — OpenBots Studio</li>
-							<li>ICT & Desktop Publishing Certificate</li>
-						</ul>
-					</div>
+						<div class="content px-3 pt-3">
+							<div class="text-small text-muted">Geophysics / Web</div>
+							<h3 class="fw-bold h4 m-0 mt-2">1D VES Inversion App</h3>
+							<p class="h6 text-muted" char-limit="150">Full-stack app: JS frontend, Flask backend, pyGIMLi inversion. Extracts VES data from tables & map, returns model and fit with selection scores.Full-stack app: JS frontend, Flask backend, pyGIMLi inversion. Extracts VES data from tables & map, returns model and fit with selection scores.</p>
+						</div>
 
+						<div class="hidden-items d-none">
+							<div class="d-flex justify-content-start gap-2 mx-3 mb-4">
+								<a href="https://github.com/yourusername/ves-app" target="_blank" class="btn btn-dark">GitHub <i class='bx bxl-github h3 ml-2'></i></a>
+								<a href="https://yourwebsite.com/ves-app" target="_blank" class="btn btn-outline">Site <i class='bx bx-globe h3 ml-2'></i></a>
+							</div>
+						</div>
+					</article>
+
+
+					<article class="h-100 project-card card-hover-active cursor-pointer" role="listitem" onclick="expandProjectCard(this)">
+						<div class="d-none hidden-items project-modal-image-contaner mt-2">
+							<img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Image">
+						</div>
+
+						<div class="content px-3 pt-3">
+							<div class="text-small text-muted">EdTech / Product</div>
+							<h3 class="fw-bold h4 m-0 mt-2">Schoovir</h3>
+							<p class="h6 text-muted" char-limit="150">Platform delivering digital learning resources to 100+ schools; led product, engineering, and stakeholder engagement.</p>
+						</div>
+
+						<div class="hidden-items d-none">
+							<div class="d-flex justify-content-start gap-2 mx-3 mb-4">
+								<a href="https://github.com/yourusername/ves-app" target="_blank" class="btn btn-dark">GitHub <i class='bx bxl-github h3 ml-2'></i></a>
+								<a href="https://yourwebsite.com/ves-app" target="_blank" class="btn btn-outline">Site <i class='bx bx-globe h3 ml-2'></i></a>
+							</div>
+						</div>
+					</article>
+
+
+					<article class="h-100 project-card card-hover-active cursor-pointer" role="listitem" onclick="expandProjectCard(this)">
+						<div class="d-none hidden-items project-modal-image-contaner mt-2">
+							<img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Image">
+						</div>
+
+						<div class="content px-3 pt-3">
+							<div class="text-small text-muted">Mobile / Offline-first</div>
+							<h3 class="fw-bold h4 m-0 mt-2">Mubia Mobile Wallet</h3>
+							<p class="h6 text-muted" char-limit="150">Offline-capable transaction wallet for SMEs, designed for intermittent connectivity and low-data environments.</p>
+						</div>
+
+						<div class="hidden-items d-none">
+							<div class="d-flex justify-content-start gap-2 mx-3 mb-4">
+								<a href="https://github.com/yourusername/ves-app" target="_blank" class="btn btn-dark">GitHub <i class='bx bxl-github h3 ml-2'></i></a>
+								<a href="https://yourwebsite.com/ves-app" target="_blank" class="btn btn-outline">Site <i class='bx bx-globe h3 ml-2'></i></a>
+							</div>
+						</div>
+					</article>
+
+
+					<article class="h-100 project-card card-hover-active cursor-pointer" role="listitem" onclick="expandProjectCard(this)">
+						<div class="d-none hidden-items project-modal-image-contaner mt-2">
+							<img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Image">
+						</div>
+
+						<div class="content px-3 pt-3">
+							<div class="text-small text-muted">VR / Immersive</div>
+							<h3 class="fw-bold h4 m-0 mt-2">VR Tourism App</h3>
+							<p class="h6 text-muted" char-limit="150">Immersive experiences showcasing Nigerian tourism sites — built for education and cultural outreach.</p>
+
+						</div>
+
+						<div class="hidden-items d-none">
+							<div class="d-flex justify-content-start gap-2 mx-3 mb-4">
+								<a href="https://github.com/yourusername/ves-app" target="_blank" class="btn btn-dark">GitHub <i class='bx bxl-github h3 ml-2'></i></a>
+								<a href="https://yourwebsite.com/ves-app" target="_blank" class="btn btn-outline">Site <i class='bx bx-globe h3 ml-2'></i></a>
+							</div>
+						</div>
+					</article>					
 				</div>
-			</aside>
+				<p class="h5 m-0 mx-1 mt-3 mb-1">See <b><a class="text-primary hover-underline cursor-pointer" href="#" onclick="showMoreProjects(this)">more</a></b> projects.</p>
+			</section>
 
-			<!-- right column -->
-			<section id="right-column">
-
-
-				<section id="projects-section" class="card p-4 mb-5" aria-labelledby="projects-heading">
-					<h2 class="h5 m-0 mx-1 mb-2">Projects</h2>
-					<div id="projects-grid" class="d-grid projects-grid-columns gap-3" role="list">
-
-
-						<article class="h-100 project-card card-hover-active cursor-pointer" role="listitem" onclick="expandProjectCard(this)">
-							<div class="d-none hidden-items project-modal-image-contaner mt-2">
-								<img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Image">
-							</div>
-
-							<div class="content px-3 pt-3">
-								<div class="text-small text-muted">Geophysics / Web</div>
-								<h3 class="fw-bold h4 m-0 mt-2">1D VES Inversion App</h3>
-								<p class="h6" char-limit="150">Full-stack app: JS frontend, Flask backend, pyGIMLi inversion. Extracts VES data from tables & map, returns model and fit with selection scores.Full-stack app: JS frontend, Flask backend, pyGIMLi inversion. Extracts VES data from tables & map, returns model and fit with selection scores.</p>
-							</div>
-
-							<div class="hidden-items d-none">
-								<div class="d-flex justify-content-start gap-2 mx-3 mb-4">
-									<a href="https://github.com/yourusername/ves-app" target="_blank" class="btn btn-dark">GitHub <i class='bx bxl-github h3 ml-2'></i></a>
-									<a href="https://yourwebsite.com/ves-app" target="_blank" class="btn btn-outline">Site <i class='bx bx-globe h3 ml-2'></i></a>
-								</div>
-							</div>
-						</article>
-
-
-						<article class="h-100 project-card card-hover-active cursor-pointer" role="listitem" onclick="expandProjectCard(this)">
-							<div class="d-none hidden-items project-modal-image-contaner mt-2">
-								<img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Image">
-							</div>
-
-							<div class="content px-3 pt-3">
-								<div class="text-small text-muted">EdTech / Product</div>
-								<h3 class="fw-bold h4 m-0 mt-2">Schoovir</h3>
-								<p class="h6" char-limit="150">Platform delivering digital learning resources to 100+ schools; led product, engineering, and stakeholder engagement.</p>
-							</div>
-
-							<div class="hidden-items d-none">
-								<div class="d-flex justify-content-start gap-2 mx-3 mb-4">
-									<a href="https://github.com/yourusername/ves-app" target="_blank" class="btn btn-dark">GitHub <i class='bx bxl-github h3 ml-2'></i></a>
-									<a href="https://yourwebsite.com/ves-app" target="_blank" class="btn btn-outline">Site <i class='bx bx-globe h3 ml-2'></i></a>
-								</div>
-							</div>
-						</article>
-
-
-						<article class="h-100 project-card card-hover-active cursor-pointer" role="listitem" onclick="expandProjectCard(this)">
-							<div class="d-none hidden-items project-modal-image-contaner mt-2">
-								<img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Image">
-							</div>
-
-							<div class="content px-3 pt-3">
-								<div class="text-small text-muted">Mobile / Offline-first</div>
-								<h3 class="fw-bold h4 m-0 mt-2">Mubia Mobile Wallet</h3>
-								<p class="h6" char-limit="150">Offline-capable transaction wallet for SMEs, designed for intermittent connectivity and low-data environments.</p>
-							</div>
-
-							<div class="hidden-items d-none">
-								<div class="d-flex justify-content-start gap-2 mx-3 mb-4">
-									<a href="https://github.com/yourusername/ves-app" target="_blank" class="btn btn-dark">GitHub <i class='bx bxl-github h3 ml-2'></i></a>
-									<a href="https://yourwebsite.com/ves-app" target="_blank" class="btn btn-outline">Site <i class='bx bx-globe h3 ml-2'></i></a>
-								</div>
-							</div>
-						</article>
-
-
-						<article class="h-100 project-card card-hover-active cursor-pointer" role="listitem" onclick="expandProjectCard(this)">
-							<div class="d-none hidden-items project-modal-image-contaner mt-2">
-								<img src="https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Image">
-							</div>
-
-							<div class="content px-3 pt-3">
-								<div class="text-small text-muted">VR / Immersive</div>
-								<h3 class="fw-bold h4 m-0 mt-2">VR Tourism App</h3>
-								<p class="h6" char-limit="150">Immersive experiences showcasing Nigerian tourism sites — built for education and cultural outreach.</p>
-
-							</div>
-
-							<div class="hidden-items d-none">
-								<div class="d-flex justify-content-start gap-2 mx-3 mb-4">
-									<a href="https://github.com/yourusername/ves-app" target="_blank" class="btn btn-dark">GitHub <i class='bx bxl-github h3 ml-2'></i></a>
-									<a href="https://yourwebsite.com/ves-app" target="_blank" class="btn btn-outline">Site <i class='bx bx-globe h3 ml-2'></i></a>
-								</div>
-							</div>
-						</article>					
-					</div>
-					<p class="h5 m-0 mx-1 mt-3 mb-1">See <b><a class="text-primary hover-underline cursor-pointer" href="#" onclick="showMoreProjects(this)">more</a></b> projects.</p>
-				</section>
-
-        		<section id="experience-section" class="card p-4 mb-5" aria-labelledby="experience-heading">
-          			<h2 class="h5 m-0 mx-1 mb-2">Experience</h2>
-
-					<div class="mx-1 mb-3">
-						<div class="fw-bold h5">Founder & Technical Lead — Schoovir</div>
-						<div class="text-small text-muted">Apr 2021 – Present</div>
-						<ul class="h6 pl-3 m-2">
-						<li>Founded Schoovir; delivered digital learning solutions to 100+ schools and universities.</li>
-						<li>Led design and development of education platforms and stakeholder coordination.</li>
-						</ul>
-					</div>
-
-					<div class="mx-1 mb-3">
-						<div class="fw-bold h5">Software Engineer — Shamrock Innovations</div>
-						<div class="text-small text-muted">Nov 2021 – Present</div>
-						<ul class="h6 pl-3 m-2">
-						<li>Designed/developed mobile & web apps (Mubia Mobile Wallet, language tools).</li>
-						<li>Built Zarma language support (fonts, keyboard layout, input system).</li>
-						</ul>
-					</div>
-
-					<div class="mx-1 mb-3">
-						<div class="fw-bold h5">VR Developer & Game Developer</div>
-						<div class="text-small text-muted">Oct 2019 – Present</div>
-						<ul class="h6 pl-3 m-2">
-						<li>Developed VR tourism app, Hunter VR game, and Hausa NLP learning tools for kids.</li>
-						</ul>
-					</div>
-				</section>
-
-				<section id="education-section" class="card p-4 mb-5" aria-labelledby="education-heading">
-					<h2 class="h5 m-0 mx-1 mb-2">Education</h2>
-					<div class="mx-1">
-						<div class="d-flex justify-content-between"><strong>Bayero University Kano (BUK)</strong><span class="text-small">Mar 2022 – Apr 2026 (Expected)</span></div>
-						<div class="text-muted">B.Sc. Geology</div>
-
-						<div style="height:12px"></div>
-						<div class="d-flex justify-content-between"><strong>Gateway Computer Training Institute</strong><span class="text-small">Sep 2015 – Jul 2017</span></div>
-						<div class="text-muted">ICT & Desktop Publishing</div>
-					</div>
-				</section>
-
-				<section id="leadership-section" class="card p-4 mb-5" aria-labelledby="leadership-heading">
-					<h2 class="h5 m-0 mx-1 mb-2">Leadership & Volunteer</h2>
-					<ul class="text-muted pl-7 my-2">
-						<li>Social Director — Nigerian Mining & Geoscience Association (NMGS), BUK Chapter</li>
-						<li>School Head Boy — Dinop International School</li>
-						<li>Operations Coordinator — Women in Tech (SheCreate NG)</li>
-						<li>Technical Supervisor — North-West Health Innovation Hackathon</li>
+			<section id="experience-section" class="card p-4 pb-6 mb-5" aria-labelledby="experience-heading">
+				<h2 class="h5 text-muted m-0 mx-1 mb-5">My Experience</h2>
+	
+				<details class="experience-item mx-1 mb-3">
+					<summary>
+						<div class="summary-content-wrapper">
+							<div class="fw-bold h5">Founder & Technical Lead at Schoovir Nigeria</div>
+							<span class="text-small text-muted mr-3">April 2021 - Present</span>
+						</div>
+					</summary>
+					<ul class="h6 pl-3 m-2">
+						<li>Founded Schoovir, delivering digital learning solutions to 100+ schools and universities.</li>
+						<li>Leading design, development and supervision of technology solutions.</li>
+						<li>Collaborating with government and stakeholders to improve learning access to students.</li>
 					</ul>
-				</section>
-
-				<section id="contact-section" class="card p-4 mb-5" aria-labelledby="contact-heading">
-					<h2 class="h5 m-0 mx-1 mb-2">Contact</h2>
-					<form method="post" action="sever-side/contact.pnp" novalidate class="mx-1">
-						<div class="d-flex gap-2 flex-wrap">
-							<div style="flex:1; min-width:200px">
-								<label class="h6 ml-2" for="name">Your name</label>
-								<input id="name" name="name" type="text" required placeholder="e.g. Muhammad Abubakar" class="mt-1">
-							</div>
-							<div style="flex:1;min-width:200px">
-								<label class="h6  ml-2" for="email">Email</label>
-								<input id="email" name="email" type="email" required placeholder="you@example.com" class="mt-1" >
-							</div>
+				</details>
+	
+				<details class="experience-item mx-1 mb-3">
+					<summary>
+						<div class="summary-content-wrapper">
+							<div class="fw-bold h5">Software Engineer at Shamrock Innovations</div>
+							<span class="text-small text-muted mr-3">November 2021 - Present</span>
 						</div>
-
-						<div class="mt-1">
-							<label class="h6 ml-2" for="subject">Subject</label>
-							<select id="subject" name="subject" placeholder="Project inquiry / Collaboration" class="mt-1" >
-								<option value="" selected disabled>Project inquiry / Collaboration</option>
-								<option value="request_cv" selected disabled>Request CV</option>
-							</select>
+					</summary>
+					<ul class="h6 pl-3 m-2">
+						<li>Design, develop and manage full-cycle mobile and desktop software applications.</li>
+						<li>Mubia Mobile Wallet, an offline capable transaction wallet, for SMEs.</li>
+						<li>Designed and developed a complete digital language support package for Zarma Language, including character design, font, keyboard layout design and app development.</li>
+						<li>Earned Robotic Process Automation (RPA) Expert Certificate, Trained by OpenBots Studios, US.</li>
+					</ul>
+				</details>
+	
+				<details class="experience-item mx-1 mb-3">
+					<summary>
+						<div class="summary-content-wrapper">
+							<div class="fw-bold h5">Virtual Reality (VR) Developer at Shamrock Innovations</div>
+							<span class="text-small text-muted mr-3">October 2020 - Present</span>
 						</div>
-
-						<div class="mt-1">
-							<label class="h6 ml-2" for="message">Message</label>
-							<textarea id="message" name="message" required placeholder="Tell me about the opportunity or demo request" class="mt-1" ></textarea>
+					</summary>
+					<ul class="h6 pl-3 m-2">
+						<li>Develop and manage virtual reality applications.</li>
+						<li>A virtual tourism app providing immersive AR/VR experience of Nigerian tourism sites.</li>
+						<li>Hunter VR, an interactive hunting VR game.</li>
+						<li>Train and mentor new staff and interns.</li>
+					</ul>
+				</details>
+	
+				<details class="experience-item mx-1 mb-3">
+					<summary>
+						<div class="summary-content-wrapper">
+							<div class="fw-bold h5">Game Developer at Shamrock Innovations</div>
+							<span class="text-small text-muted mr-3">October 2019 - November 2021</span>
 						</div>
-
-						<div class="d-flex align-items-center gap-2 mt-1">
-							<button type="submit" class="btn btn-primary">Send message</button>
+					</summary>
+					<ul class="h6 pl-3 m-2">
+						<li>Developed mobile & desktop games, engaged with clients and co-managed projects.</li>
+						<li>Hausa NLP, an interactive learning app for kids, teaching math in Nigerian local languages.</li>
+						<li>Created a desktop lab simulator for Bayero University Kano to enhance STEM teaching.</li>
+						<li>Trained and mentored new staff.</li>
+					</ul>
+				</details>
+	
+				<details class="experience-item mx-1 mb-3">
+					<summary>
+						<div class="summary-content-wrapper">
+							<div class="fw-bold h5">3D Artist at Shamrock Innovations</div>
+							<span class="text-small text-muted mr-3">September 2018 - October 2019</span>
 						</div>
-					</form>
-				</section>
-      		</section>
+					</summary>
+					<ul class="h6 pl-3 m-2">
+						<li>Managed animation production pipeline (Writing, Modeling, Animation, Voices & Editing).</li>
+						<li>Trained and mentored new staff, students and interns.</li>
+						<li>Recognized with Organization’s Top Performer & Sparkling Clean Award.</li>
+					</ul>
+				</details>
+	
+				<details class="experience-item mx-1 mb-3">
+					<summary>
+						<div class="summary-content-wrapper">
+							<div class="fw-bold h5">3D Artist (Design & Animation) Freelance</div>
+							<span class="text-small text-muted mr-3">October 2017 - September 2018</span>
+						</div>
+					</summary>
+					<ul class="h6 pl-3 m-2">
+						<li>Delivered custom 3D design and animation to individuals and organizations.</li>
+					</ul>
+				</details>
+			</section>
+			<section id="skills-section" class="p-4 mb-5" aria-labelledby="skills-heading">
+				<h2 class="h2 fw-bold m-0 mb-5 text-center">Skills</h2>
+				<div class="chips">
+					<div class="chip">Software Development</div>
+					<div class="chip">HTML</div>
+					<div class="chip">CSS</div>
+					<div class="chip">Unity</div>
+					<div class="chip">Frontend Dev</div>
+					<div class="chip">React</div>
+					<div class="chip">NextJS</div>
+					<div class="chip">Flutter Dev</div>
+					<div class="chip">Android</div>
+					<div class="chip">iOS</div>
+				</div>
+			</section>				<section id="contact-section" class="card p-4 mb-5" aria-labelledby="contact-heading">
+				<h2 class="h5 m-0 mx-1 mb-2">Contact</h2>
+				<form method="post" action="sever-side/contact.pnp" novalidate class="mx-1">
+					<div class="d-flex gap-2 flex-wrap">
+						<div style="flex:1; min-width:200px">
+							<label class="h6 ml-2" for="name">Your name</label>
+							<input id="name" name="name" type="text" required placeholder="e.g. Muhammad Abubakar" class="mt-1">
+						</div>
+						<div style="flex:1;min-width:200px">
+							<label class="h6  ml-2" for="email">Email</label>
+							<input id="email" name="email" type="email" required placeholder="you@example.com" class="mt-1" >
+						</div>
+					</div>
+
+					<div class="mt-1">
+						<label class="h6 ml-2" for="subject">Subject</label>
+						<select id="subject" name="subject" placeholder="Project inquiry / Collaboration" class="mt-1" >
+							<option value="" selected disabled>Project inquiry / Collaboration</option>
+							<option value="request_cv" selected disabled>Request CV</option>
+						</select>
+					</div>
+
+					<div class="mt-1">
+						<label class="h6 ml-2" for="message">Message</label>
+						<textarea id="message" name="message" required placeholder="Tell me about the opportunity or demo request" class="mt-1" ></textarea>
+					</div>
+
+					<div class="d-flex align-items-center gap-2 mt-1">
+						<button type="submit" class="btn btn-primary">Send message</button>
+					</div>
+				</form>
+			</section>
     	</main>
 
 		<footer>
@@ -442,7 +447,7 @@
     function showMoreProjects(link) {
 		animateLayoutChange(()=>{
 			if(isShowingMoreProjects){
-				rightColumn.prepend(projectsSection);
+				// rightColumn.prepend(projectsSection);
 
 				if (moreProjectsSkeleton.length !== 0) {
 					moreProjectsSkeleton.forEach( (skeleton)=> {skeleton.classList.add("d-none");} );
@@ -450,7 +455,7 @@
 
 				link.textContent='more';
 			}else{
-				moreProjectsContainer.prepend(projectsSection);
+				// moreProjectsContainer.prepend(projectsSection);
 
 				if (moreProjectsSkeleton.length !== 0) {
 					moreProjectsSkeleton.forEach( (skeleton)=> {skeleton.classList.remove("d-none");} );
@@ -670,7 +675,7 @@
 				toggleHiddenProjectCardItems(projectCardToExpand, true);
 				ecpandedProjectCard = projectCardToExpand;
 			}
-		}, '.project-card');
+		}, '.project-card, .card');
 	}
 
 	function toggleHiddenProjectCardItems(projectCard, show) {
