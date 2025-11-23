@@ -41,26 +41,25 @@
 </head>
 
 <body>
+	<button id="theme-toggle" class="btn theme-toggle-btn text">
+		<i class='bx bx-sun'></i>
+		<i class='bx bx-moon'></i>
+	</button>
   	<div id="main-container" class="container px-3 py-6 mx-auto my-8">
-    	<header class="d-flex align-items-center justify-content-between gap-4 mb-5">
-        	<div class="brand d-flex align-items-center gap-4">
-          		<div class="avatar d-flex align-items-center justify-content-center h3 fw-bold" aria-hidden="true">MA</div>
-          		<div>
-					<h1 class="my-name">Muhammad Abubakar</h1>
-            		<div class="text-small text-muted">Geologist • Software & Game Developer</div>
-          		</div>
+    	<header class="d-flex flex-column align-items-center justify-content-between ml-2 mb-5">
+			
+        	<div class="d-flex flex-column align-items-start">
+            	<h3 class="my-0">I'm <span class="my-name">Muhammad Abubakar</span></h3>
+				
         	</div>
 			<div class="d-flex align-items-center gap-3">
-          		<nav aria-label="Main navigation">
+				<p class="text-muted mt-2 mb-0"><span class="text-primary">•</span> Geologist <span class="text-primary">•</span> Software & Game Developer</p>
+
+          		<nav class="d-flex" aria-label="Main navigation">
 					<a class="fw-bold text-no-underline text-hover-primary text-muted ml-3" href="#projects-section">Projects</a>
 					<a class="fw-bold text-no-underline text-hover-primary text-muted ml-3" href="#experience-section">Experience</a>
 					<a class="fw-bold text-no-underline text-hover-primary text-muted ml-3" href="#contact-section">Contact</a>
           		</nav>
-				<label class="d-flex align-items-center gap-2 text-muted text-small cursor-pointer ml-3" title="Toggle light/dark mode">
-					<i class='bx bx-sun h5' style="margin-right: -3px;"></i>
-					<input type="checkbox" id="theme-switch" class="toggle" aria-label="Toggle theme">
-					<i class='bx bx-moon' style="margin-bottom: -3px;"></i>
-        		</label>
       		</div>
     	</header>
 
@@ -373,15 +372,22 @@
 
 	// Theme Toggle
 	(function() {
-		const toggle = document.getElementById('theme-switch');
+		const themeToggleButton = document.getElementById('theme-toggle');
 		const body = document.body;
-		if(localStorage.getItem('theme') === 'dark') {
+
+		// Set initial theme from local storage
+		if (localStorage.getItem('theme') === 'dark') {
 			body.classList.add('dark');
-			toggle.checked = true;
 		}
-		toggle.addEventListener('change', ()=> {
+
+		themeToggleButton.addEventListener('click', () => {
 			body.classList.toggle('dark');
-			localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+			// Save theme to local storage
+			if (body.classList.contains('dark')) {
+				localStorage.setItem('theme', 'dark');
+			} else {
+				localStorage.setItem('theme', 'light');
+			}
 		});
 	})();
 

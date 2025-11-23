@@ -282,6 +282,7 @@
  .h4 { font-size: 1.25rem; }
  .h5 { font-size: 1rem; }
  .h6 { font-size: 0.875rem; }
+ .text{color: var(--text);}
  .text-small {font-size: 0.82rem;}
  .text-primary{color: var(--accent);}
  .text-muted{color:var(--muted) !important;}
@@ -416,7 +417,7 @@
  .h-100 {height: 100%;}
 
 
- 
+
  .container{max-width:1100px;}
  .area-sticky{
      position:sticky;
@@ -605,6 +606,30 @@
          grid-row: span 2;
      }
  }
+
+
+
+
+
+
+.my-name {
+    font-size: 70px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
  /* Hide Scrollbar */
  .hide-scrollbar {
      scrollbar-width: none;
@@ -719,6 +744,7 @@
      display: none;
  }
  .experience-item summary::after {
+    height: 1.5rem;
      content: '+';
      font-size: 1.5rem;
      color: var(--accent);
@@ -742,3 +768,70 @@
          margin-top: 4px;
      }
  }
+
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.theme-toggle-btn .bx-sun {
+    display: none;
+}
+
+.theme-toggle-btn .bx-moon {
+    display: block;
+}
+
+body.dark .theme-toggle-btn .bx-sun {
+    display: block;
+}
+
+body.dark .theme-toggle-btn .bx-moon {
+    display: none;
+}
+
+
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.theme-toggle-btn .bx-sun {
+    display: none;
+}
+
+.theme-toggle-btn .bx-moon {
+    display: block;
+}
+
+body.dark .theme-toggle-btn .bx-sun {
+    display: block;
+}
+
+body.dark .theme-toggle-btn .bx-moon {
+    display: none;
+}
