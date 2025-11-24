@@ -320,6 +320,7 @@
  .text-normal { font-style: normal; }
  .text-underline { text-decoration: underline; }
  .text-no-underline { text-decoration: none; }
+ .text-nowrap {white-space: nowrap;}
  .lh-1 { line-height: 1; }
  .lh-sm { line-height: 1.25; }
  .lh-base { line-height: 1.5; }
@@ -611,23 +612,32 @@
 header{
     flex-direction:row;
     align-items:flex-start;
+    
 }
-
 
 .brand {
+    
     text-align: left;
+    line-height: 0.7;
 }
 
+.brand h3 {
+    flex-direction: row;
+    align-items: end;
+}
 
 .my-name {
     font-size: 70px;
     font-weight: 900;
+    margin-left: 0.2rem;
+    white-space: nowrap;
 }
 
 .navigation {
     display: flex;
     flex-direction: column;
     text-align: right;
+    margin-right: var(--space-2);
 }
 
 
@@ -635,39 +645,67 @@ header{
 
 @media (max-width: 950px) {
     header{
-         flex-direction:column;
+        flex-direction: column;
     }
 
+    .brand {
+        /* text-align: center; */
+    }
 
+    
+
+    
+
+    .navigation {
+        /* display: flex; */
+        flex-direction: row;
+        justify-content: end;
+        /* text-align: right; */
+        margin-top: 1.5rem;
+        margin-right: var(--space-6);
+        /* margin-bottom: 0.5rem; */
+    }
+}
+
+@media (max-width: 840px) {
+    .my-name {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 740px) {
     .brand {
         text-align: center;
     }
 
+    .brand h3 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .my-name {
         font-size: 60px;
-    }
-
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
+        white-space: unset;
+        margin-top: 0.2rem;
     }
 }
 
 
 @media (max-width: 400px) {
-
     .brand {
-        text-align: center;
+        /* text-align: center; */
         margin-bottom: 1.5rem;
     }
 
+    .brand p {
+        padding-top: 0.2rem;
+        line-height: 1.2rem;
+    }
 
     .my-name {
-        font-size: 50px;
+        font-size: 15vw;
+        margin-top: 0;
     }
 
     .navigation {
@@ -822,8 +860,8 @@ header{
  }
 
 .theme-toggle-btn {
-    position: fixed;
-    top: 20px;
+    position: absolute;
+    top: 10px;
     right: 20px;
     z-index: 1000;
     width: 40px;
@@ -856,8 +894,8 @@ body.dark .theme-toggle-btn .bx-moon {
 
 
 .theme-toggle-btn {
-    position: fixed;
-    top: 20px;
+    position: absolute;
+    top: 10px;
     right: 20px;
     z-index: 1000;
     width: 40px;
